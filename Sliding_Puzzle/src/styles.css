@@ -1,0 +1,131 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    color: #e1d5f2;
+    font-size: 3em;
+    font-family:  "Papyrus", "Copperplate", fantasy;
+    text-shadow: 1px 1px 2px #000;
+    margin: 20px 0;
+    animation: float 1s infinite alternate;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    background-color: #098496;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #04fff2;
+  }
+  
+  select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .board {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .board > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2b705;
+    color: #fff;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .board > div:hover {
+    background-color: #f2b705;
+    transform: scale(1.05);
+  }
+  
+  .board > div:active {
+    transform: scale(0.95);
+  }
+  
+  .board > div.empty {
+    background-color: transparent;
+    cursor: default;
+    box-shadow: none;
+  }
+  
+  .game-over {
+    font-size: 1.5em;
+    color: #28a745;
+    margin-top: 20px;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .game-over {
+    font-size: 32px;
+    color: rgb(6, 70, 246);
+    font-family: "Papyrus", "Copperplate", fantasy;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 1s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
